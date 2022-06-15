@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Window Object</h1>
+    <h2>The prompt() Method</h2>
+
+    <p>Click the button to ask for your favorite drink.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        let number1 = prompt("give me first number", 5);
+        let number2 = prompt("give me second number", 6);
+        let text;
+        let favDrink = prompt("What's your choice:  ", 1);
+        switch (favDrink) {
+          case "1":
+            text = "total sum is" + (parseFloat(number1) + parseFloat(number2));
+            break;
+          case "2":
+            text = "total sub is" + (parseFloat(number1) - parseFloat(number2));
+            break;
+          case "3":
+            text = "total mult is" + parseFloat(number1) * parseFloat(number2);
+            break;
+          default:
+            text = "no operation selectede";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
